@@ -16,7 +16,6 @@ public class Endereco {
 	}
 
 	public Endereco(String logradouro, String complemento, String bairro, String cidade, String estado) {
-		super();
 		this.logradouro = logradouro;
 		this.complemento = complemento;
 		this.bairro = bairro;

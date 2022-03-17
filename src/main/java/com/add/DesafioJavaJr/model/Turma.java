@@ -42,7 +42,7 @@ public class Turma {
 	}
 
 	public Turma(Long id, String nome, Long capacidade, Escola escola) {
-		super();
+		
 		this.id = id;
 		this.nome = nome;
 		this.capacidade = capacidade;

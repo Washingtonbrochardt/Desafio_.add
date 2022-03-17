@@ -36,7 +36,7 @@ public class Escola {
 	}
 
 	public Escola(Long id, String nome, Endereco endereco) {
-		super();
+		
 		this.id = id;
 		this.nome = nome;
 		this.endereco = endereco;

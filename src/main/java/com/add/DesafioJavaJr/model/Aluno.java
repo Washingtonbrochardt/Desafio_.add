@@ -39,7 +39,7 @@ public class Aluno {
 	}
 
 	public Aluno(Long id, String nome, LocalDate dataDeNascimento, Turma turma) {
-		super();
+		
 		this.id = id;
 		this.nome = nome;
 		this.dataDeNascimento = dataDeNascimento;
