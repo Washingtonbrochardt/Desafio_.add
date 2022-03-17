@@ -1,5 +1,9 @@
 package com.add.DesafioJavaJr.repository;
 
-public interface TurmaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.add.DesafioJavaJr.model.Turma;
+
+public interface TurmaRepository extends JpaRepository<Turma, Long> {
 
 }
