@@ -1,5 +1,5 @@
 package com.add.DesafioJavaJr.repository;
 
-public class TurmaRepository {
+public interface TurmaRepository {
 
 }
