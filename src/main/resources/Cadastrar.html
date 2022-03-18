@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de cadastro de alunos</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+	<h1>Cadastro dos alunos</h1>
+	<hr>
+	<form action="#" th:action="@{/alunos/cadastrar}" th:object="${aluno}" method="POST">
+		<input type="hidden" id="id" th:field="*{id}">
+		<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger"></span>
+		<input type="text" th:field="*{nome}" placeholder="Nome" class="form-control mb-4 col-4">
+		<span th:if="${#fields.hasErrors('dataDeNascimento')}" th:errors="*{dataDeNascimento}" class="text-danger"></span>
+		<input type="date" th:field="*{dataDeNascimento}" placeholder="Data de nascimento"
+			class="form-control mb-4 col-4">
+		<span th:if="${#fields.hasErrors('turma')}" th:errors="*{turma}" class="text-danger"></span>
+		<br>
+		<select th:field="*{turma}" style="width:150px;" class="form-group">
+			<option value="">Turma</option>
+			<option th:each="turma : ${turmas}" th:value="${turma.id}" th:text="${turma.nome}"></option>
+		</select>
+		<br>
+		<button style="margin: 15px 0;" type="submit" class="btn btn-primary btn-sm mb-3">Salvar</button>
+	</form>
+	<hr>
+	<a th:href="@{/alunos/cadastrados}">Retornar aos alunos cadastrados</a>
+</body>
+
+</html>
